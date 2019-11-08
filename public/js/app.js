@@ -1,6 +1,3 @@
-console.log('Script was uplouded')
-
-
 const weatherForm = document.querySelector('form')
 const dataInput = document.querySelector('input')
 let massageOne = document.querySelector('#massageOne')
