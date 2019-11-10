@@ -15,11 +15,17 @@ const forecast = (latitude,longitude,callback) =>{
             const temperature = response.body.currently.apparentTemperature
             const rainChance = response.body.currently.precipProbability
             const summary = response.body.daily.data[0].summary
+            const temperatureHigh = response.body.daily.data[0].temperatureHigh
+            const temperatureLow = response.body.daily.data[0].temperatureLow
+
+           
 
             callback(undefined,
                 { temperature,
                   rainChance,
-                  summary }                                        
+                  summary,
+                  temperatureHigh,
+                  temperatureLow }                                        
             )
         }
     })

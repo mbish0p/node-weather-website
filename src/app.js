@@ -39,7 +39,7 @@ app.get('/weather',(req,response) =>{
         }
         console.log( fullName + " " +latitude +","+ longitude)
 
-        forecast(latitude,longitude,(error,{temperature,rainChance,summary}) =>{
+        forecast(latitude,longitude,(error,{temperature,rainChance,summary,temperatureHigh,temperatureLow}) =>{
             
             if(error){
                 return response.send({error})
@@ -48,7 +48,9 @@ app.get('/weather',(req,response) =>{
                 fullName,
                 temperature,
                 summary,
-                rainChance
+                rainChance,
+                temperatureHigh,
+                temperatureLow
             })
         })
     }) 
